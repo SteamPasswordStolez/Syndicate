@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>DS13 섹션 시뮬레이터 (Chimera)</title>
+  <style>
+    :root{
+      --bg:#0b0f16; --panel:#121a25; --text:#e8eefc; --muted:#9fb0d0;
+      --line:#24344d; --accent:#7aa2ff; --bad:#ff6b6b; --good:#46d39a; --warn:#ffd166;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Apple SD Gothic Neo,Noto Sans KR,sans-serif;background:var(--bg);color:var(--text)}
+    header{padding:16px 16px 8px; border-bottom:1px solid var(--line)}
+    h1{margin:0;font-size:18px}
+    .sub{margin-top:6px;color:var(--muted);font-size:12px;line-height:1.35}
+    main{max-width:980px;margin:0 auto;padding:16px;display:grid;gap:12px}
+    .row{display:grid;gap:12px}
+    @media(min-width:980px){ .row{grid-template-columns: 1.1fr 0.9fr; align-items:start;} }
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+    .card h2{margin:0 0 10px;font-size:14px}
+    label{display:block;color:var(--muted);font-size:12px;margin:10px 0 6px}
+    input,select,button,textarea{
+      width:100%; padding:10px 10px; border-radius:10px;
+      background:#0d1420; border:1px solid var(--line); color:var(--text);
+      font-size:14px; outline:none;
+    }
+    textarea{min-height:84px; resize:vertical}
+    button{cursor:pointer; background:linear-gradient(180deg,#1b2a44,#15223a); border:1px solid #2a3e63}
+    button:hover{filter:brightness(1.08)}
+    .grid2{display:grid;gap:10px}
+    @media(min-width:700px){ .grid2{grid-template-columns:1fr 1fr;} }
+    .pill{display:inline-block;padding:4px 9px;border-radius:999px;font-size:12px;border:1px solid var(--line);color:var(--muted)}
+    .pill.good{color:var(--good);border-color:rgba(70,211,154,.4)}
+    .pill.warn{color:var(--warn);border-color:rgba(255,209,102,.4)}
+    .pill.bad{color:var(--bad);border-color:rgba(255,107,107,.4)}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+    table{width:100%;border-collapse:collapse;margin-top:10px;overflow:hidden;border-radius:10px;border:1px solid var(--line)}
+    th,td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:13px}
+    th{color:var(--muted);font-weight:600;background:#0e1727}
+    tr:last-child td{border-bottom:none}
+    .small{font-size:12px;color:var(--muted);line-height:1.35}
+    .flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+    .hint{color:var(--muted);font-size:12px;margin-top:8px}
+    .danger{color:var(--bad)}
+    .ok{color:var(--good)}
+  </style>
+</head>
+<body>
+<header>
+  <h1>DS13 섹션 시뮬레이터 (Chimera)</h1>
+  <div class="sub">
+    • 데이터: <span class="mono">ds13_single.json</span> (같은 폴더에 두면 자동 로드)<br>
+    • 목표: <b>최대 진도</b> / <b>목표차(자동)</b> / <b>목표 섹션</b> / <b>누적 SP</b><br>
+    • 주의: 이 버전은 “섹션 통과 가능 여부(요구조건)” 중심. BP/상점/별업 비용까지 포함한 “메인차 스펙 목표(★n)”는 다음 단계에서 확장.
+  </div>
+</header>
+
+<main>
+  <div class="row">
+    <div class="card">
+      <h2>1) 데이터 로드</h2>
+      <div class="grid2">
+        <div>
+          <label>자동 로드 소스</label>
+          <select id="dataSource">
+            <option value="fetch" selected>같은 폴더의 ds13_single.json 읽기</option>
+            <option value="paste">JSON 직접 붙여넣기</option>
+          </select>
+          <div id="fetchBox" class="hint">GitHub Pages면 <span class="mono">ds13_single.json</span>을 이 HTML과 같은 폴더에 두면 됨.</div>
+        </div>
+        <div id="pasteBox" style="display:none">
+          <label>JSON 붙여넣기</label>
+          <textarea id="jsonPaste" placeholder="ds13_single.json 내용을 그대로 붙여넣기"></textarea>
+        </div>
+      </div>
+      <div class="flex" style="margin-top:10px">
+        <button id="btnLoad">데이터 로드</button>
+        <span id="loadStatus" class="pill">미로드</span>
+        <span id="eventInfo" class="pill mono" style="display:none"></span>
+      </div>
+      <div class="hint">로드 후 아래 입력/목표 영역이 활성화됨.</div>
+    </div>
+
+    <div class="card">
+      <h2>2) 목표 선택</h2>
+      <label>목표 타입</label>
+      <select id="goalType" disabled>
+        <option value="MAX">최대 진도(어디까지 밀 수 있나)</option>
+        <option value="CAR">목표차 선택(자동으로 마지막 요구 섹션 목표)</option>
+        <option value="SECTION">목표 섹션 선택</option>
+        <option value="SP">누적 SP 목표</option>
+      </select>
+
+      <div id="goalCarBox" style="display:none">
+        <label>목표차</label>
+        <select id="goalCar"></select>
+        <div class="hint">requirements 기반으로 “마지막으로 등장하는 섹션”이 목표로 잡힘.</div>
+      </div>
+
+      <div id="goalSectionBox" style="display:none">
+        <label>목표 섹션</label>
+        <select id="goalSection"></select>
+      </div>
+
+      <div id="goalSpBox" style="display:none">
+        <label>누적 SP 목표</label>
+        <input id="goalSp" type="number" min="0" step="1" placeholder="예: 25000" />
+        <div class="hint">섹션별 SP cap을 누적해 목표 SP를 넘기는 섹션을 자동 목표로 잡음.</div>
+      </div>
+
+      <div class="flex" style="margin-top:10px">
+        <button id="btnRun" disabled>시뮬레이션 실행</button>
+        <span id="runStatus" class="pill">대기</span>
+      </div>
+      <div class="hint">정확도 확장(상점/BP/업글) 단계로 가면 “메인차 ★n 목표”도 가능.</div>
+    </div>
+  </div>
+
+  <div class="card" id="inputsCard" style="opacity:.55">
+    <h2>3) 내 차량 상태 입력 (요구조건 충족용)</h2>
+    <div class="small">
+      • 아래 목록은 DS13 requirements에서 등장한 차량만 자동 생성됨.<br>
+      • 별(★)만 필요한 요구는 ★만 입력하면 됨. 랭크 요구(“x★ : y rank”)는 <b>메인차 랭크</b>로 체크함.
+    </div>
+
+    <div class="grid2" style="margin-top:10px">
+      <div>
+        <label>메인차(Chimera) 현재 ★</label>
+        <input id="mainStars" type="number" min="0" max="6" step="0.5" value="0" />
+      </div>
+      <div>
+        <label>메인차(Chimera) 현재 rank/PR</label>
+        <input id="mainRank" type="number" min="0" step="1" value="0" />
+      </div>
+    </div>
+
+    <label style="margin-top:14px">요구 차량별 ★ 입력</label>
+    <div id="carsTableWrap"></div>
+
+    <div class="hint">
+      팁) “나는 이 차 없음”이면 ★=0으로 두면 됨.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>4) 결과</h2>
+    <div id="resultTop" class="small">데이터 로드 후 실행하면 결과가 여기에 표시됨.</div>
+    <div id="resultDetails" style="margin-top:10px"></div>
+  </div>
+</main>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+
+  const state = {
+    data: null,
+    sections: [],
+    rewardsBySection: new Map(), // section_id -> {SHORT:{sp,sc},...}
+    requirementsBySection: new Map(), // section_id -> [req...]
+    carMap: [], // car_section_map
+    carsInReq: [], // distinct car names (excluding rank gate strings)
+  };
+
+  function setPill(el, text, kind){
+    el.textContent = text;
+    el.className = "pill" + (kind ? " " + kind : "");
+  }
+
+  function parseRankGate(text){
+    // "1 ★ : 2,583 rank"
+    const m = String(text).match(/(\d+)\s*★\s*:\s*([\d,]+)\s*rank/i);
+    if(!m) return null;
+    return { star: Number(m[1]), rank: Number(m[2].replaceAll(",","")) };
+  }
+
+  function normalizeCarKey(name){
+    return String(name || "").trim().toLowerCase();
+  }
+
+  function buildIndexes(){
+    const t = state.data.tables;
+    state.sections = [...t.sections].sort((a,b)=>a.section_id-b.section_id);
+
+    state.rewardsBySection.clear();
+    for(const r of t.section_race_rewards){
+      const sid = r.section_id;
+      if(!state.rewardsBySection.has(sid)) state.rewardsBySection.set(sid, {});
+      state.rewardsBySection.get(sid)[r.race_type] = { sp: Number(r.reward_sp||0), sc: Number(r.reward_sc||0) };
+    }
+
+    state.requirementsBySection.clear();
+    for(const req of t.requirements){
+      const sid = req.section_id;
+      if(!state.requirementsBySection.has(sid)) state.requirementsBySection.set(sid, []);
+      state.requirementsBySection.get(sid).push(req);
+    }
+
+    state.carMap = [...t.car_section_map].sort((a,b)=>a.display_name.localeCompare(b.display_name));
+
+    // distinct real cars in requirements: exclude rank gate strings
+    const cars = new Map(); // key -> display
+    for(const req of t.requirements){
+      const gate = parseRankGate(req.required_car);
+      if(gate) continue;
+      const name = String(req.required_car||"").trim();
+      if(!name) continue;
+      const key = normalizeCarKey(name);
+      cars.set(key, name);
+    }
+    // also ensure car_section_map display_names included
+    for(const c of state.carMap){
+      cars.set(normalizeCarKey(c.display_name), c.display_name);
+    }
+
+    state.carsInReq = [...cars.entries()].map(([key, name]) => ({ key, name }))
+      .sort((a,b)=>a.name.localeCompare(b.name, "en"));
+  }
+
+  function renderGoalUI(){
+    const gt = $("goalType").value;
+    $("goalCarBox").style.display = (gt === "CAR") ? "" : "none";
+    $("goalSectionBox").style.display = (gt === "SECTION") ? "" : "none";
+    $("goalSpBox").style.display = (gt === "SP") ? "" : "none";
+  }
+
+  function fillGoalSelectors(){
+    // Car selector
+    const carSel = $("goalCar");
+    carSel.innerHTML = "";
+    for(const c of state.carMap){
+      const opt = document.createElement("option");
+      opt.value = c.car_key;
+      opt.textContent = `${c.display_name}  (→ 섹션 ${c.last_section_id})`;
+      carSel.appendChild(opt);
+    }
+
+    // Section selector
+    const secSel = $("goalSection");
+    secSel.innerHTML = "";
+    for(const s of state.sections){
+      const opt = document.createElement("option");
+      opt.value = String(s.section_id);
+      opt.textContent = `${s.section_id}. ${s.section_name} (cap ${s.sp_cap})`;
+      secSel.appendChild(opt);
+    }
+  }
+
+  function renderCarsTable(){
+    const wrap = $("carsTableWrap");
+    wrap.innerHTML = "";
+    const table = document.createElement("table");
+    table.innerHTML = `
+      <thead>
+        <tr>
+          <th>차량</th>
+          <th style="width:160px">내 ★ (0~6)</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    `;
+    const tb = table.querySelector("tbody");
+    for(const c of state.carsInReq){
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${c.name}</td>
+        <td><input class="carStar" data-car="${c.key}" type="number" min="0" max="6" step="0.5" value="0"></td>
+      `;
+      tb.appendChild(tr);
+    }
+    wrap.appendChild(table);
+  }
+
+  function getUserStarsMap(){
+    const m = new Map();
+    const inputs = document.querySelectorAll(".carStar");
+    for(const inp of inputs){
+      const key = inp.getAttribute("data-car");
+      const v = Number(inp.value || 0);
+      m.set(key, v);
+    }
+    // include main car (chimera) too for convenience
+    m.set("chimera", Number($("mainStars").value||0));
+    m.set("koenigsegg chimera", Number($("mainStars").value||0));
+    return m;
+  }
+
+  function getGoalTargetSection(){
+    const gt = $("goalType").value;
+    if(gt === "MAX") return null;
+
+    if(gt === "CAR"){
+      const key = $("goalCar").value;
+      const found = state.carMap.find(x => x.car_key === key);
+      return found ? found.last_section_id : null;
+    }
+
+    if(gt === "SECTION"){
+      return Number($("goalSection").value);
+    }
+
+    if(gt === "SP"){
+      const targetSp = Number($("goalSp").value || 0);
+      let sum = 0;
+      for(const s of state.sections){
+        sum += Number(s.sp_cap||0);
+        if(sum >= targetSp) return s.section_id;
+      }
+      // if beyond total, set last
+      return state.sections.length ? state.sections[state.sections.length-1].section_id : null;
+    }
+
+    return null;
+  }
+
+  function checkSectionRequirements(section_id, userStarsMap, mainStars, mainRank){
+    const reqs = state.requirementsBySection.get(section_id) || [];
+    const fails = [];
+
+    for(const req of reqs){
+      const gate = parseRankGate(req.required_car);
+      if(gate){
+        if(mainStars < gate.star) fails.push(`메인차 ★ ${gate.star}+ 필요 (현재 ${mainStars})`);
+        if(mainRank < gate.rank) fails.push(`메인차 rank ${gate.rank}+ 필요 (현재 ${mainRank})`);
+        continue;
+      }
+
+      const carName = String(req.required_car||"").trim();
+      const key = normalizeCarKey(carName);
+      const needStar = (req.required_star == null) ? 0 : Number(req.required_star);
+
+      const haveStar = userStarsMap.get(key) ?? 0;
+      if(haveStar < needStar){
+        fails.push(`${carName} ★${needStar}+ 필요 (현재 ★${haveStar})`);
+      }
+    }
+
+    return { ok: fails.length === 0, fails, reqsCount: reqs.length };
+  }
+
+  function simulate(){
+    const userStars = getUserStarsMap();
+    const mainStars = Number($("mainStars").value||0);
+    const mainRank = Number($("mainRank").value||0);
+
+    const targetSection = getGoalTargetSection();
+    const goalType = $("goalType").value;
+
+    let maxSection = 0;
+    let blockedAt = null;
+
+    for(const s of state.sections){
+      const sid = s.section_id;
+
+      const ck = checkSectionRequirements(sid, userStars, mainStars, mainRank);
+      if(!ck.ok){
+        blockedAt = { section: sid, name: s.section_name, reasons: ck.fails };
+        break;
+      }
+      // assume SP cap fill is feasible once requirements met (rewards exist)
+      maxSection = sid;
+
+      if(targetSection != null && sid >= targetSection){
+        break;
+      }
+    }
+
+    // verdict
+    if(goalType === "MAX"){
+      return { mode:"MAX", maxSection, blockedAt };
+    } else {
+      return { mode:"TARGET", targetSection, reached: maxSection >= targetSection, maxSection, blockedAt };
+    }
+  }
+
+  function renderResult(res){
+    const top = $("resultTop");
+    const details = $("resultDetails");
+    details.innerHTML = "";
+
+    if(res.mode === "MAX"){
+      if(res.maxSection === 0){
+        setPill($("runStatus"), "실패", "bad");
+        top.innerHTML = `<span class="pill bad">불가</span> 시작 섹션부터 요구조건 미달.`;
+      }else{
+        setPill($("runStatus"), "완료", "good");
+        const last = state.sections.find(x=>x.section_id===res.maxSection);
+        top.innerHTML = `
+          <div class="flex">
+            <span class="pill good">최대 진도</span>
+            <span class="mono">섹션 ${res.maxSection}</span>
+            <span class="pill mono">${last ? last.section_name : ""}</span>
+          </div>
+          <div class="hint">다음 섹션에서 막히는 이유를 아래에서 확인.</div>
+        `;
+      }
+    } else {
+      const t = res.targetSection;
+      const tSec = state.sections.find(x=>x.section_id===t);
+      if(res.reached){
+        setPill($("runStatus"), "목표 달성", "good");
+        top.innerHTML = `
+          <div class="flex">
+            <span class="pill good">목표 달성</span>
+            <span class="mono">목표 섹션 ${t}</span>
+            <span class="pill mono">${tSec ? tSec.section_name : ""}</span>
+          </div>
+          <div class="hint">현재 입력값 기준으로 목표 섹션까지 요구조건을 통과 가능.</div>
+        `;
+      } else {
+        setPill($("runStatus"), "목표 실패", "bad");
+        top.innerHTML = `
+          <div class="flex">
+            <span class="pill bad">목표 실패</span>
+            <span class="mono">목표 섹션 ${t}</span>
+            <span class="pill mono">${tSec ? tSec.section_name : ""}</span>
+          </div>
+          <div class="hint">아래 “막힌 지점”을 확인.</div>
+        `;
+      }
+    }
+
+    // blocked details
+    if(res.blockedAt){
+      const b = res.blockedAt;
+      const card = document.createElement("div");
+      card.className = "card";
+      card.style.marginTop = "10px";
+      card.innerHTML = `
+        <h2>막힌 지점</h2>
+        <div class="flex">
+          <span class="pill bad">STOP</span>
+          <span class="mono">섹션 ${b.section}</span>
+          <span class="pill mono">${b.name}</span>
+        </div>
+        <div style="margin-top:10px">
+          <div class="small">원인(요구조건 미달):</div>
+          <ul class="small" style="margin:8px 0 0 18px;line-height:1.55">
+            ${b.reasons.map(x=>`<li>${x}</li>`).join("")}
+          </ul>
+        </div>
+      `;
+      details.appendChild(card);
+    } else {
+      // if not blocked and reached last
+      const info = document.createElement("div");
+      info.className = "hint";
+      info.textContent = "현재 입력 기준으로는 데이터 범위의 마지막 섹션까지 요구조건 통과 가능.";
+      details.appendChild(info);
+    }
+  }
+
+  async function loadData(){
+    const src = $("dataSource").value;
+    let obj = null;
+
+    if(src === "fetch"){
+      const resp = await fetch("./ds13_single.json", { cache: "no-store" });
+      if(!resp.ok) throw new Error("ds13_single.json을 불러오지 못했어. 같은 폴더에 있는지 확인해줘.");
+      obj = await resp.json();
+    } else {
+      const txt = $("jsonPaste").value.trim();
+      if(!txt) throw new Error("붙여넣기 JSON이 비어있어.");
+      obj = JSON.parse(txt);
+    }
+
+    if(!obj || !obj.tables) throw new Error("JSON 형식이 예상과 달라. (tables 키가 필요)");
+    state.data = obj;
+
+    buildIndexes();
+    fillGoalSelectors();
+    renderCarsTable();
+
+    // enable UI
+    $("goalType").disabled = false;
+    $("btnRun").disabled = false;
+    $("inputsCard").style.opacity = "1";
+    $("eventInfo").style.display = "";
+    $("eventInfo").textContent = `${obj.event?.id || "DS"} • ${obj.event?.name || ""}`.trim();
+
+    setPill($("loadStatus"), "로드됨", "good");
+    setPill($("runStatus"), "대기", "");
+  }
+
+  // Events
+  $("dataSource").addEventListener("change", () => {
+    const v = $("dataSource").value;
+    $("pasteBox").style.display = (v === "paste") ? "" : "none";
+    $("fetchBox").style.display = (v === "fetch") ? "" : "none";
+  });
+
+  $("goalType").addEventListener("change", renderGoalUI);
+
+  $("btnLoad").addEventListener("click", async () => {
+    try{
+      setPill($("loadStatus"), "로딩...", "");
+      await loadData();
+      renderGoalUI();
+    }catch(e){
+      console.error(e);
+      setPill($("loadStatus"), "실패", "bad");
+      $("eventInfo").style.display = "none";
+      alert(e.message || String(e));
+    }
+  });
+
+  $("btnRun").addEventListener("click", () => {
+    try{
+      const res = simulate();
+      renderResult(res);
+    }catch(e){
+      console.error(e);
+      setPill($("runStatus"), "오류", "bad");
+      alert(e.message || String(e));
+    }
+  });
+
+})();
+</script>
+</body>
+</html>

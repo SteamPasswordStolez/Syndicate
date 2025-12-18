@@ -1,0 +1,1668 @@
+{
+  "schema": "ds_section_sim_v1",
+  "event": {
+    "event_id": "DS13",
+    "name": "Drive Syndicate 13 - Chimera"
+  },
+  "generated_at": "2025-12-18T12:06:06.052935+00:00",
+  "tables": {
+    "sections": [
+      {
+        "event_id": "DS13",
+        "section_id": 1,
+        "section_name": "SHADOW OF THE MACHINE 1",
+        "sp_cap": 1000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 2,
+        "section_name": "SHADOW OF THE MACHINE 2",
+        "sp_cap": 5000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 3,
+        "section_name": "SHADOW OF THE MACHINE 3",
+        "sp_cap": 8000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 4,
+        "section_name": "SHADOW OF THE MACHINE 4",
+        "sp_cap": 1000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 5,
+        "section_name": "THE FROSTBOUND VEIL 1",
+        "sp_cap": 15000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 6,
+        "section_name": "THE FROSTBOUND VEIL 2",
+        "sp_cap": 20000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 7,
+        "section_name": "THE FROSTBOUND VEIL 3",
+        "sp_cap": 23000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 8,
+        "section_name": "THE FROSTBOUND VEIL 4",
+        "sp_cap": 25000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 9,
+        "section_name": "THE FROSTBOUND VEIL 5",
+        "sp_cap": 2000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 10,
+        "section_name": "BREATH OF THE STORM 1",
+        "sp_cap": 22000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 11,
+        "section_name": "BREATH OF THE STORM 2",
+        "sp_cap": 27000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 12,
+        "section_name": "BREATH OF THE STORM 3",
+        "sp_cap": 30000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 13,
+        "section_name": "BREATH OF THE STORM 4",
+        "sp_cap": 33000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 14,
+        "section_name": "BREATH OF THE STORM 5",
+        "sp_cap": 35000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 15,
+        "section_name": "BREATH OF THE STORM 6",
+        "sp_cap": 3000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 16,
+        "section_name": "THE HEART OF THUNDER 1",
+        "sp_cap": 33000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 17,
+        "section_name": "THE HEART OF THUNDER 2",
+        "sp_cap": 37000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 18,
+        "section_name": "THE HEART OF THUNDER 3",
+        "sp_cap": 40000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 19,
+        "section_name": "THE HEART OF THUNDER 4",
+        "sp_cap": 42000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 20,
+        "section_name": "THE HEART OF THUNDER 5",
+        "sp_cap": 44000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 21,
+        "section_name": "THE HEART OF THUNDER 6",
+        "sp_cap": 4000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 22,
+        "section_name": "THE HOWLING MIRROR 1",
+        "sp_cap": 31000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 23,
+        "section_name": "THE HOWLING MIRROR 2",
+        "sp_cap": 33000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 24,
+        "section_name": "THE HOWLING MIRROR 3",
+        "sp_cap": 36000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 25,
+        "section_name": "THE HOWLING MIRROR 4",
+        "sp_cap": 38000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 26,
+        "section_name": "THE HOWLING MIRROR 5",
+        "sp_cap": 40000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 27,
+        "section_name": "THE HOWLING MIRROR 6",
+        "sp_cap": 42000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 28,
+        "section_name": "THE HOWLING MIRROR 7",
+        "sp_cap": 5000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 29,
+        "section_name": "ASHES OF MIDWINTER 1",
+        "sp_cap": 31000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 30,
+        "section_name": "ASHES OF MIDWINTER 2",
+        "sp_cap": 33000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 31,
+        "section_name": "ASHES OF MIDWINTER 3",
+        "sp_cap": 35000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 32,
+        "section_name": "ASHES OF MIDWINTER 4",
+        "sp_cap": 38000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 33,
+        "section_name": "ASHES OF MIDWINTER 5",
+        "sp_cap": 40000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 34,
+        "section_name": "ASHES OF MIDWINTER 6",
+        "sp_cap": 42000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 35,
+        "section_name": "ASHES OF MIDWINTER 7",
+        "sp_cap": 6000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 36,
+        "section_name": "RISE OF THE CHIMERA 1",
+        "sp_cap": 45000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 37,
+        "section_name": "RISE OF THE CHIMERA 2",
+        "sp_cap": 50000
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 38,
+        "section_name": "RISE OF THE CHIMERA 3",
+        "sp_cap": 5000
+      }
+    ],
+    "section_race_rewards": [
+      {
+        "event_id": "DS13",
+        "section_id": 2,
+        "race_type": "SHORT",
+        "reward_sp": 3350,
+        "reward_sc": 1170
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 2,
+        "race_type": "MEDIUM",
+        "reward_sp": 5000,
+        "reward_sc": 1170
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 2,
+        "race_type": "LONG",
+        "reward_sp": 5000,
+        "reward_sc": 1170
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 3,
+        "race_type": "SHORT",
+        "reward_sp": 3350,
+        "reward_sc": 1310
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 3,
+        "race_type": "MEDIUM",
+        "reward_sp": 5000,
+        "reward_sc": 1310
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 3,
+        "race_type": "LONG",
+        "reward_sp": 8000,
+        "reward_sc": 1310
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 5,
+        "race_type": "SHORT",
+        "reward_sp": 3750,
+        "reward_sc": 2040
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 5,
+        "race_type": "MEDIUM",
+        "reward_sp": 3750,
+        "reward_sc": 2040
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 5,
+        "race_type": "LONG",
+        "reward_sp": 3750,
+        "reward_sc": 2040
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 6,
+        "race_type": "SHORT",
+        "reward_sp": 6700,
+        "reward_sc": 3100
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 6,
+        "race_type": "MEDIUM",
+        "reward_sp": 6700,
+        "reward_sc": 3100
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 6,
+        "race_type": "LONG",
+        "reward_sp": 6700,
+        "reward_sc": 3100
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 7,
+        "race_type": "SHORT",
+        "reward_sp": 23000,
+        "reward_sc": 8720
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 7,
+        "race_type": "MEDIUM",
+        "reward_sp": 23000,
+        "reward_sc": 8720
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 7,
+        "race_type": "LONG",
+        "reward_sp": 23000,
+        "reward_sc": 8720
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 8,
+        "race_type": "SHORT",
+        "reward_sp": 25000,
+        "reward_sc": 12100
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 8,
+        "race_type": "MEDIUM",
+        "reward_sp": 25000,
+        "reward_sc": 12100
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 8,
+        "race_type": "LONG",
+        "reward_sp": 25000,
+        "reward_sc": 12100
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 10,
+        "race_type": "SHORT",
+        "reward_sp": 5500,
+        "reward_sc": 3260
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 10,
+        "race_type": "MEDIUM",
+        "reward_sp": 5500,
+        "reward_sc": 3260
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 10,
+        "race_type": "LONG",
+        "reward_sp": 5500,
+        "reward_sc": 3260
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 11,
+        "race_type": "SHORT",
+        "reward_sp": 9000,
+        "reward_sc": 4500
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 11,
+        "race_type": "MEDIUM",
+        "reward_sp": 9000,
+        "reward_sc": 4500
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 11,
+        "race_type": "LONG",
+        "reward_sp": 9000,
+        "reward_sc": 4500
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 12,
+        "race_type": "SHORT",
+        "reward_sp": 30000,
+        "reward_sc": 11330
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 12,
+        "race_type": "MEDIUM",
+        "reward_sp": 30000,
+        "reward_sc": 11330
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 12,
+        "race_type": "LONG",
+        "reward_sp": 30000,
+        "reward_sc": 11330
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 13,
+        "race_type": "SHORT",
+        "reward_sp": 33000,
+        "reward_sc": 15500
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 13,
+        "race_type": "MEDIUM",
+        "reward_sp": 33000,
+        "reward_sc": 15500
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 13,
+        "race_type": "LONG",
+        "reward_sp": 33000,
+        "reward_sc": 15500
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 14,
+        "race_type": "SHORT",
+        "reward_sp": 35000,
+        "reward_sc": 17040
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 14,
+        "race_type": "MEDIUM",
+        "reward_sp": 35000,
+        "reward_sc": 17040
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 14,
+        "race_type": "LONG",
+        "reward_sp": 35000,
+        "reward_sc": 17040
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 16,
+        "race_type": "SHORT",
+        "reward_sp": 8250,
+        "reward_sc": 4070
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 16,
+        "race_type": "MEDIUM",
+        "reward_sp": 8250,
+        "reward_sc": 4070
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 16,
+        "race_type": "LONG",
+        "reward_sp": 8250,
+        "reward_sc": 4070
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 17,
+        "race_type": "SHORT",
+        "reward_sp": 12350,
+        "reward_sc": 6200
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 17,
+        "race_type": "MEDIUM",
+        "reward_sp": 12350,
+        "reward_sc": 6200
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 17,
+        "race_type": "LONG",
+        "reward_sp": 12350,
+        "reward_sc": 6200
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 18,
+        "race_type": "SHORT",
+        "reward_sp": 40000,
+        "reward_sc": 17430
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 18,
+        "race_type": "MEDIUM",
+        "reward_sp": 40000,
+        "reward_sc": 17430
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 18,
+        "race_type": "LONG",
+        "reward_sp": 40000,
+        "reward_sc": 17430
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 19,
+        "race_type": "SHORT",
+        "reward_sp": 42000,
+        "reward_sc": 24200
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 19,
+        "race_type": "MEDIUM",
+        "reward_sp": 42000,
+        "reward_sc": 24200
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 19,
+        "race_type": "LONG",
+        "reward_sp": 42000,
+        "reward_sc": 24200
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 20,
+        "race_type": "SHORT",
+        "reward_sp": 44000,
+        "reward_sc": 26620
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 20,
+        "race_type": "MEDIUM",
+        "reward_sp": 44000,
+        "reward_sc": 26620
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 20,
+        "race_type": "LONG",
+        "reward_sp": 44000,
+        "reward_sc": 26620
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 22,
+        "race_type": "SHORT",
+        "reward_sp": 7750,
+        "reward_sc": 4880
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 22,
+        "race_type": "MEDIUM",
+        "reward_sp": 7750,
+        "reward_sc": 4880
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 22,
+        "race_type": "LONG",
+        "reward_sp": 7750,
+        "reward_sc": 4880
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 23,
+        "race_type": "SHORT",
+        "reward_sp": 11000,
+        "reward_sc": 7440
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 23,
+        "race_type": "MEDIUM",
+        "reward_sp": 11000,
+        "reward_sc": 7440
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 23,
+        "race_type": "LONG",
+        "reward_sp": 11000,
+        "reward_sc": 7440
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 24,
+        "race_type": "SHORT",
+        "reward_sp": 36000,
+        "reward_sc": 20910
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 24,
+        "race_type": "MEDIUM",
+        "reward_sp": 36000,
+        "reward_sc": 20910
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 24,
+        "race_type": "LONG",
+        "reward_sp": 36000,
+        "reward_sc": 20910
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 25,
+        "race_type": "SHORT",
+        "reward_sp": 38000,
+        "reward_sc": 29040
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 25,
+        "race_type": "MEDIUM",
+        "reward_sp": 38000,
+        "reward_sc": 29040
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 25,
+        "race_type": "LONG",
+        "reward_sp": 38000,
+        "reward_sc": 29040
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 26,
+        "race_type": "SHORT",
+        "reward_sp": 40000,
+        "reward_sc": 31950
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 26,
+        "race_type": "MEDIUM",
+        "reward_sp": 40000,
+        "reward_sc": 31950
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 26,
+        "race_type": "LONG",
+        "reward_sp": 40000,
+        "reward_sc": 31950
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 27,
+        "race_type": "SHORT",
+        "reward_sp": 42000,
+        "reward_sc": 36300
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 27,
+        "race_type": "MEDIUM",
+        "reward_sp": 42000,
+        "reward_sc": 36300
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 27,
+        "race_type": "LONG",
+        "reward_sp": 42000,
+        "reward_sc": 36300
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 29,
+        "race_type": "SHORT",
+        "reward_sp": 7750,
+        "reward_sc": 6100
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 29,
+        "race_type": "MEDIUM",
+        "reward_sp": 7750,
+        "reward_sc": 6100
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 29,
+        "race_type": "LONG",
+        "reward_sp": 7750,
+        "reward_sc": 6100
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 30,
+        "race_type": "SHORT",
+        "reward_sp": 11000,
+        "reward_sc": 9300
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 30,
+        "race_type": "MEDIUM",
+        "reward_sp": 11000,
+        "reward_sc": 9300
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 30,
+        "race_type": "LONG",
+        "reward_sp": 11000,
+        "reward_sc": 9300
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 31,
+        "race_type": "SHORT",
+        "reward_sp": 35000,
+        "reward_sc": 26140
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 31,
+        "race_type": "MEDIUM",
+        "reward_sp": 35000,
+        "reward_sc": 26140
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 31,
+        "race_type": "LONG",
+        "reward_sp": 35000,
+        "reward_sc": 26140
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 32,
+        "race_type": "SHORT",
+        "reward_sp": 38000,
+        "reward_sc": 36300
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 32,
+        "race_type": "MEDIUM",
+        "reward_sp": 38000,
+        "reward_sc": 36300
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 32,
+        "race_type": "LONG",
+        "reward_sp": 38000,
+        "reward_sc": 36300
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 33,
+        "race_type": "SHORT",
+        "reward_sp": 40000,
+        "reward_sc": 39930
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 33,
+        "race_type": "MEDIUM",
+        "reward_sp": 40000,
+        "reward_sc": 39930
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 33,
+        "race_type": "LONG",
+        "reward_sp": 40000,
+        "reward_sc": 39930
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 34,
+        "race_type": "SHORT",
+        "reward_sp": 42000,
+        "reward_sc": 45380
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 34,
+        "race_type": "MEDIUM",
+        "reward_sp": 42000,
+        "reward_sc": 45380
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 34,
+        "race_type": "LONG",
+        "reward_sp": 42000,
+        "reward_sc": 45380
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 36,
+        "race_type": "SHORT",
+        "reward_sp": 6000,
+        "reward_sc": 6780
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 36,
+        "race_type": "MEDIUM",
+        "reward_sp": 9000,
+        "reward_sc": 6780
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 36,
+        "race_type": "LONG",
+        "reward_sp": 14000,
+        "reward_sc": 6780
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 37,
+        "race_type": "SHORT",
+        "reward_sp": 6000,
+        "reward_sc": 7750
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 37,
+        "race_type": "MEDIUM",
+        "reward_sp": 9000,
+        "reward_sc": 7750
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 37,
+        "race_type": "LONG",
+        "reward_sp": 14000,
+        "reward_sc": 7750
+      }
+    ],
+    "requirements": [
+      {
+        "event_id": "DS13",
+        "section_id": 2,
+        "required_car": "Chimera",
+        "required_star": null
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 3,
+        "required_car": "Chimera",
+        "required_star": null
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 5,
+        "required_car": "Dodge Charger",
+        "required_star": 1.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 6,
+        "required_car": "Dodge Charger",
+        "required_star": 2.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 7,
+        "required_car": "Dodge Charger",
+        "required_star": 3.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 8,
+        "required_car": "Dodge Charger",
+        "required_star": 4.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 10,
+        "required_car": "1 ★ : 2,583 rank",
+        "required_star": null
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 11,
+        "required_car": "2 ★ : 2,897 rank",
+        "required_star": null
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 12,
+        "required_car": "3 ★ : 3,174 rank",
+        "required_star": null
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 13,
+        "required_car": "4 ★ : 3,521 rank",
+        "required_star": null
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 14,
+        "required_car": "4 ★ : 3,521 rank",
+        "required_star": null
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 16,
+        "required_car": "Solus GT",
+        "required_star": 1.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 17,
+        "required_car": "Solus GT",
+        "required_star": 2.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 18,
+        "required_car": "Solus GT",
+        "required_star": 3.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 19,
+        "required_car": "Solus GT",
+        "required_star": 4.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 20,
+        "required_car": "Solus GT",
+        "required_star": 5.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 22,
+        "required_car": "Aurora Agil",
+        "required_star": 1.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 23,
+        "required_car": "Aurora Agil",
+        "required_star": 2.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 24,
+        "required_car": "Aurora Agil",
+        "required_star": 3.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 25,
+        "required_car": "Aurora Agil",
+        "required_star": 4.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 26,
+        "required_car": "Aurora Agil",
+        "required_star": 5.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 27,
+        "required_car": "Aurora Agil",
+        "required_star": 6.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 29,
+        "required_car": "Bugatti Bolide",
+        "required_star": 2.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 30,
+        "required_car": "Bugatti Bolide",
+        "required_star": 3.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 31,
+        "required_car": "Bugatti Bolide",
+        "required_star": 4.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 32,
+        "required_car": "Bugatti Bolide",
+        "required_star": 5.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 33,
+        "required_car": "Bugatti Bolide",
+        "required_star": 6.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 34,
+        "required_car": "Bugatti Bolide",
+        "required_star": 6.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 36,
+        "required_car": "Chimera",
+        "required_star": 2.0
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 37,
+        "required_car": "Chimera",
+        "required_star": 3.0
+      }
+    ],
+    "strategies": [
+      {
+        "event_id": "DS13",
+        "section_id": 2,
+        "pattern": "1xShort + 1xLong",
+        "hazard": "Hazard Level 0",
+        "requirement_text": "Chimera",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 3,
+        "pattern": "2xShort + 1xMedium",
+        "hazard": "Hazard Level 0",
+        "requirement_text": "Chimera",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 5,
+        "pattern": "4xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Dodge Charger 1*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 6,
+        "pattern": "2xAny3 + 1xS2 + 1xM2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Dodge Charger 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 6,
+        "pattern": "7xS + 1xM + 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Dodge Charger 1*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 7,
+        "pattern": "9xS2 + 1xM1 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Dodge Charger 3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 7,
+        "pattern": "9xS+ 1xM1 + 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Dodge Charger 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 7,
+        "pattern": "21xShort + 1xLong",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Dodge Charger 1*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 8,
+        "pattern": "10xS2 + 1xS1 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Dodge Charger 4*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 8,
+        "pattern": "10xS - 1xS1 - 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Dodge Charger 3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 8,
+        "pattern": "23xShort + 1xLong",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Dodge Charger 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 10,
+        "pattern": "4xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "1 ★ : 2,583 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 11,
+        "pattern": "2xAny3 + 1xS2 + 1xM2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "2 ★ : 2,897 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 11,
+        "pattern": "7xS + 1xM + 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "1 ★ : 2,583 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 12,
+        "pattern": "9xS2 + 1xS1 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "3 ★ : 3,174 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 12,
+        "pattern": "9xS + 1xS1 + 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "2 ★ : 2,897 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 12,
+        "pattern": "19xS + 1xM + 1xL",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "1 ★ : 2,583 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 13,
+        "pattern": "10xS2 + 1xS1 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "4 ★ : 3,521 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 13,
+        "pattern": "10xS + 1xS1 + 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "3 ★ : 3,174 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 13,
+        "pattern": "21xS + 1xM + 1xL",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "2 ★ : 2,897 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 14,
+        "pattern": "11xS2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "4 ★ : 3,521 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 14,
+        "pattern": "11xShort + 1xLong",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "3 ★ : 3,174 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 14,
+        "pattern": "24xShort + 1xLong",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "2 ★ : 2,897 rank",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 16,
+        "pattern": "4xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Solus GT 1*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 17,
+        "pattern": "2xAny3 + 3xS2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Solus GT 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 17,
+        "pattern": "9xShort + 1xLong",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Solus GT 1*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 18,
+        "pattern": "10xS2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Solus GT 3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 18,
+        "pattern": "10xShort + 1xLong",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Solus GT 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 18,
+        "pattern": "22xShort + 1xLong",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Solus GT 1*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 19,
+        "pattern": "10xS2 + 1xM1 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Solus GT  4*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 19,
+        "pattern": "10xS + 1xM1 + 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Solus GT  3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 19,
+        "pattern": "23xShort + 1xLong",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Solus GT  2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 20,
+        "pattern": "11xS2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Solus GT  5*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 20,
+        "pattern": "11xShort + 1xLong",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Solus GT  4*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 20,
+        "pattern": "24xShort + 1xLong",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Solus GT  3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 22,
+        "pattern": "4xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Aurora Agil 1*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 23,
+        "pattern": "2xAny3 +1xS2 + 1xM2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Aurora Agil 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 23,
+        "pattern": "8xShort + 1xLong",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Aurora Agil 1*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 24,
+        "pattern": "9xS2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Aurora Agil 3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 24,
+        "pattern": "9xShort + 1xLong",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Aurora Agil 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 24,
+        "pattern": "18xS + 1xM + 1xL",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Aurora Agil 1*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 25,
+        "pattern": "9xS2 + 1xM1 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Aurora Agil 4*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 25,
+        "pattern": "9xS + 1xM1 + 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Aurora Agil 3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 25,
+        "pattern": "21xShort + 1xLong",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Aurora Agil 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 26,
+        "pattern": "10xS2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Aurora Agil 5*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 26,
+        "pattern": "10xShort + 1xLong",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Aurora Agil 4*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 26,
+        "pattern": "22xShort + 1xLong",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Aurora Agil 3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 27,
+        "pattern": "10xS2 + 1xM1 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Aurora Agil 6*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 27,
+        "pattern": "10xS + 1xM1 + 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Aurora Agil 5*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 27,
+        "pattern": "23xShort + 1xLong",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Aurora Agil 4*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 29,
+        "pattern": "4xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Bugatti Bolide 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 30,
+        "pattern": "2xAny3 +1xS2 + 1xM2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Bugatti Bolide 3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 30,
+        "pattern": "8xShort + 1xLong",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Bugatti Bolide 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 31,
+        "pattern": "8xS2 + 2xS1 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Bugatti Bolide 4*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 31,
+        "pattern": "8xS2 + 2xS1 + 1xL2",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Bugatti Bolide 3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 31,
+        "pattern": "19xS + 1xL",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Bugatti Bolide 2*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 32,
+        "pattern": "9xS2 + 1xM1 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Bugatti Bolide 5*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 32,
+        "pattern": "9xS2 + 1xM1 + 1xL2",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Bugatti Bolide 4*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 32,
+        "pattern": "21xS + 1xL",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Bugatti Bolide 3*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 33,
+        "pattern": "10xS2 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Bugatti Bolide 6*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 33,
+        "pattern": "10xS + 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Bugatti Bolide 5*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 33,
+        "pattern": "22xS + 1xL",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Bugatti Bolide 4*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 34,
+        "pattern": "10xS2 + 1xM1 + 1xAny3",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Bugatti Bolide 6*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 34,
+        "pattern": "10xS + 1xM1 + 1xL",
+        "hazard": "Hazard Level 2",
+        "requirement_text": "Bugatti Bolide 5*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 34,
+        "pattern": "23xS + 1xL",
+        "hazard": "Hazard Level 1",
+        "requirement_text": "Bugatti Bolide 4*",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 36,
+        "pattern": "7xS + 1xL",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Chimera 2* MAX",
+        "source": "sheet"
+      },
+      {
+        "event_id": "DS13",
+        "section_id": 37,
+        "pattern": "8xS + 1xL",
+        "hazard": "Hazard Level 3",
+        "requirement_text": "Chimera 3*",
+        "source": "sheet"
+      }
+    ],
+    "car_section_map": [
+      {
+        "car_key": "aurora agil",
+        "display_name": "Aurora Agil",
+        "first_section_id": 22,
+        "last_section_id": 27,
+        "section_ids": [
+          22,
+          23,
+          24,
+          25,
+          26,
+          27
+        ],
+        "rule": "last_requirement_section"
+      },
+      {
+        "car_key": "bugatti bolide",
+        "display_name": "Bugatti Bolide",
+        "first_section_id": 29,
+        "last_section_id": 34,
+        "section_ids": [
+          29,
+          30,
+          31,
+          32,
+          33,
+          34
+        ],
+        "rule": "last_requirement_section"
+      },
+      {
+        "car_key": "chimera",
+        "display_name": "Chimera",
+        "first_section_id": 2,
+        "last_section_id": 37,
+        "section_ids": [
+          2,
+          3,
+          36,
+          37
+        ],
+        "rule": "last_requirement_section"
+      },
+      {
+        "car_key": "dodge charger",
+        "display_name": "Dodge Charger",
+        "first_section_id": 5,
+        "last_section_id": 8,
+        "section_ids": [
+          5,
+          6,
+          7,
+          8
+        ],
+        "rule": "last_requirement_section"
+      },
+      {
+        "car_key": "solus gt",
+        "display_name": "Solus GT",
+        "first_section_id": 16,
+        "last_section_id": 20,
+        "section_ids": [
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "rule": "last_requirement_section"
+      }
+    ]
+  },
+  "notes": {
+    "goal_car_rule": "Goal section for a car = last_section_id in car_section_map (derived from requirements only).",
+    "section_unit": "This dataset models DS13 in 'section' units (not individual races)."
+  }
+}
